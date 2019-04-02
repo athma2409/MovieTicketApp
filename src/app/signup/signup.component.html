@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+      (click)="goback()"></ion-icon>
+
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col align-self-center>
+
+        <mat-card>
+          <div text-center>
+            <h4>Register here</h4>
+          </div>
+          <div padding>
+            <form class="example-form">
+
+              <ion-item>
+                <ion-label position="floating">Name</ion-label>
+                <ion-input name="name" [(ngModel)]="customers.name"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Number</ion-label>
+                <ion-input name="phone" [(ngModel)]="customers.phone"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Place</ion-label>
+                <ion-input name="address" [(ngModel)]="customers.address"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input name=" email" [(ngModel)]="customers.email"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input name="password" [(ngModel)]="customers.password"></ion-input>
+              </ion-item><br><br>
+
+              <mat-checkbox color="primary">i agree to the <a>Terms and Conditions</a></mat-checkbox>
+              <br><br>
+
+              <ion-button size="large" expand="block" (click)="register()">Sign up</ion-button>
+
+            </form>
+          </div>
+        </mat-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
