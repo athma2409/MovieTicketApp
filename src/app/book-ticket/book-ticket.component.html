@@ -11,21 +11,17 @@
   </ion-header>
 
 <ion-content >
-   
-
+  
   <ion-grid>
     <ion-row justify-content-center>
       <ion-col align-self-center >
 
         <mat-card >
           <div text-center>
-            <h4>Enter Details</h4>
           </div>
           <div padding>
             <form class="example-form">
-              
-
-                      <ion-img class="center" src="{{movie.image_url}}"></ion-img>
+                      <ion-img class="center"  [src]="movie.image_url" style="height:250px"></ion-img>
                       <ion-item>
                         <ion-label position="floating">{{movie.name}}</ion-label>
                         <ion-input></ion-input>
@@ -36,7 +32,7 @@
                         </ion-item>
                     
 
-                                <mat-checkbox color="primary">i agree to the <a>Terms and Conditions</a></mat-checkbox>
+                                <mat-checkbox color="primary" >i agree to the <a>Terms and Conditions</a></mat-checkbox>
                                 <br><br>
 
               <ion-button size="large" expand="block" (click)='addBooking(movie,data.tickets)'>Book Now</ion-button>

@@ -10,7 +10,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-      <ion-img class="center" src="assets/logo.jpeg"></ion-img>
+      <ion-img class="center" src="assets/logo.jpeg" ></ion-img>
 
   
       <ion-grid>
@@ -32,12 +32,13 @@
                           <ion-input type="password" name="password" [(ngModel)]="data.password"></ion-input>
                         </ion-item><br><br>
       
-                <a href="/forgotPassword"> Forgot Password?</a><br><br>
-                <ion-button size="large" expand="block" (click)="login(data)">Login</ion-button><br>
-    
+                <a click="forgotPassword()"> Forgot Password?</a><br><br>
+                <ion-button size="medium" expand="block" (click)="login(data)">Login</ion-button><br>
+                <ion-button size="small" expand="block" (click)="movies()">Continue Without Login</ion-button><br>
+
     
                 <div text-center>
-                  Dont hav an account? <a href="/signup"> Sign up </a><br><br>
+                  Dont hav an account? <a click="signup()"> Sign up </a><br><br>
                   <a href="#">Privacy policy</a>
                 </div>
   

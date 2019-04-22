@@ -28,12 +28,6 @@ import { ThankyouComponent} from './thankyou/thankyou.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-
-
-
-
-
-
 @NgModule({
   declarations: [AppComponent,BookTicketComponent,LoginComponent,SignupComponent,ForgotPasswordComponent,
     PaymentsComponent,OffersComponent,ThankyouComponent],

@@ -18,6 +18,8 @@
       <ion-col align-self-center>
 
         <mat-card>
+            <ion-img class="center" src="assets/logo.jpeg"></ion-img>
+
           <div text-center>
             <h4>Register here</h4>
           </div>
@@ -29,23 +31,25 @@
                 <ion-input name="name" [(ngModel)]="customers.name"></ion-input>
               </ion-item>
               <ion-item>
-                <ion-label position="floating">Number</ion-label>
-                <ion-input name="phone" [(ngModel)]="customers.phone"></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="floating">Place</ion-label>
-                <ion-input name="address" [(ngModel)]="customers.address"></ion-input>
-              </ion-item>
-              <ion-item>
                 <ion-label position="floating">Email</ion-label>
                 <ion-input name=" email" [(ngModel)]="customers.email"></ion-input>
               </ion-item>
               <ion-item>
                 <ion-label position="floating">Password</ion-label>
                 <ion-input name="password" [(ngModel)]="customers.password"></ion-input>
-              </ion-item><br><br>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">MobileNumber</ion-label>
+                <ion-input name="phone" [(ngModel)]="customers.phone"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Location</ion-label>
+                <ion-input name="address" [(ngModel)]="customers.address"></ion-input>
+              </ion-item>
+            <br><br>
 
-              <mat-checkbox color="primary">i agree to the <a>Terms and Conditions</a></mat-checkbox>
+              <mat-checkbox 
+              color="primary">i agree to the <a>Terms and Conditions</a></mat-checkbox>
               <br><br>
 
               <ion-button size="large" expand="block" (click)="register()">Sign up</ion-button>

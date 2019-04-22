@@ -18,5 +18,12 @@ this.router.navigate(['/login']);
 goback(){
   this._location.back();
 }
+offersPage(){
+  this.router.navigate(['/tabs/tab2']);
+}
+MoviesPage(){
+  this.router.navigate(['/tabs/tab1']);
+
+}
 
 }

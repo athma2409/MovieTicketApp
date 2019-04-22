@@ -9,10 +9,10 @@ import { Observable} from 'rxjs';
 export class MovieService {
 
   constructor(private http: HttpClient) { }
-  private moviesUrl = 'http://192.168.0.35:3000/api/movies';
-  private bookingUrl= 'http://192.168.0.35:3000/api/booking';
-  private customerUrl = 'http://192.168.0.35:3000/api/customers';
-  private loginUrl = 'http://192.168.0.35:3000/api/login'
+  private moviesUrl = 'http://localhost:3000/api/movies';
+  private bookingUrl= 'http://localhost:3000/api/booking';
+  private customerUrl = 'http://localhost:3000/api/customers';
+  private loginUrl = 'http://localhost:3000/api/login'
   getMovies(): Observable<[]>{
     return this.http.get<[]>(this.moviesUrl);     
   }
