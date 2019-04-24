@@ -5,9 +5,8 @@ import { SignupComponent} from './signup/signup.component';
 import { ForgotPasswordComponent} from './forgot-password/forgot-password.component';
 import { BookTicketComponent} from './book-ticket/book-ticket.component';
 import { PaymentsComponent} from './payments/payments.component';
-import { OffersComponent } from './offers/offers.component';
 import { ThankyouComponent} from './thankyou/thankyou.component';
-
+import { BookingHistoryComponent} from './booking-history/booking-history.component'
 
 
 const routes: Routes = [
@@ -40,10 +39,11 @@ const routes: Routes = [
     path:'payments',
     component:PaymentsComponent
   },
+
 {
-  path:'offers',
-  component:OffersComponent
-} 
+  path:'bookingHistory',
+  component:BookingHistoryComponent
+},
 ];
 @NgModule({
   imports: [

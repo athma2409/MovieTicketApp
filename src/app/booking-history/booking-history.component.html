@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-icon name="arrow-round-back"  style="font-size:40px;float: left;left: 0;margin:0;color:rgb(209, 102, 15)"
+      (click)="goback()"></ion-icon>
+
+    <ion-title style="color:rgb(209, 102, 15)">
+      Booking History
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-img class="center" src="assets/logo.jpeg"></ion-img>
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-card *ngFor="let b of bookings" class="center1">
+
+        <ion-card-header>
+          <ion-card-subtitle>{{b.id}}.{{b.movie_name}}</ion-card-subtitle>
+          <ion-card-subtitle>Theater : {{b.theatre}} </ion-card-subtitle>
+          <ion-card-subtitle>Date : {{b.movie_date | date:'dd/MM/yyy'}}</ion-card-subtitle>
+
+          <ion-card-subtitle>Tickets : {{b.tickets}}</ion-card-subtitle>
+
+        </ion-card-header>
+
+      </ion-card>
+
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

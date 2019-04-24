@@ -14,7 +14,7 @@ import { LoginComponent} from './login/login.component';
 import { SignupComponent} from './signup/signup.component';
 import { ForgotPasswordComponent} from './forgot-password/forgot-password.component';
 import { FormsModule} from '@angular/forms';
-
+import { BookingHistoryComponent} from './booking-history/booking-history.component'
 
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
@@ -23,14 +23,13 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { BookTicketComponent } from './book-ticket/book-ticket.component';
 import { PaymentsComponent} from './payments/payments.component';
-import { OffersComponent } from './offers/offers.component';
 import { ThankyouComponent} from './thankyou/thankyou.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
-  declarations: [AppComponent,BookTicketComponent,LoginComponent,SignupComponent,ForgotPasswordComponent,
-    PaymentsComponent,OffersComponent,ThankyouComponent],
+  declarations: [AppComponent,BookTicketComponent,BookingHistoryComponent,LoginComponent,SignupComponent,ForgotPasswordComponent,
+    PaymentsComponent,ThankyouComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(),   HttpModule,MatButtonToggleModule,MatCheckboxModule,
     HttpClientModule, AppRoutingModule,FormsModule,MatInputModule,MatCardModule, BrowserAnimationsModule],

@@ -26,41 +26,23 @@ export class LoginComponent implements OnInit {
   }
 
   res:any={};
-  // login(data){
-  //   this.movieService.authenticate(data).subscribe((result)=>{console.log(result);
-  //     this.res=result;
-  //     if(this.res.result.password==data.password){
-  //       this.router.navigate(['/tabs/tab1'])
-  //     }else{
-  //       alert('Wrong Password');
-  //       this.presentToast();
-  //     }
-  //   });
-  // }
-  // async presentToast() {
-  //   const toast = await this.toastController.create({
-  //     message: 'Your settings have been saved.',
-  //     duration: 2000
-  //   });
-  //   toast.present();
-  // }
-
-
-
+  
   login(data){
+    
       this.movieService.authenticate(data).subscribe((result)=>{console.log(result);
       this.res=result;
       // localStorage.setItem('customer',JSON.stringify(result))
-      if(this.res.result.password==data.password){
-        this.router.navigate(['/tabs/tab1'])
-      }else{
-        //alert("IncorrectDetails");
-        this.presentAlert();
-        this.data={
-          email:'',
-          password:''
+        if(this.res.result.password==data.password){
+          this.router.navigate(['/tabs/tab1'])
+        }else{
+          this.presentAlert();
+          this.data={
+            email:'',
+            password:''
+          }
         }
-      }
+      
+     
     });
   }
   async presentAlert() {

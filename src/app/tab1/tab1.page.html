@@ -4,23 +4,9 @@
       Movies
 
     </ion-title>
-    <ion-button color="rgb(209, 102, 15)" style="margin-left:280px" (click)="logoutApp()">Log out</ion-button>
+    <!-- <ion-button color="rgb(209, 102, 15)" style="margin-left:280px" (click)="logoutApp()">Log out</ion-button> -->
 
   </ion-toolbar>
-  <!-- <ion-list>
-    <ion-item>
-      <ion-label style="color:rgb(209, 102, 15)">Choose Language</ion-label>
-      <ion-select value="All" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="All">All</ion-select-option>
-        <ion-select-option value="Telugu">Telugu</ion-select-option>
-        <ion-select-option value="Kannada">Kannada</ion-select-option>
-        <ion-select-option value="English">English</ion-select-option>
-        <ion-select-option value="Tamil">Tamil</ion-select-option>
-        <ion-select-option value="Hindi">Hindi</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-  </ion-list> -->
 </ion-header>
 
 <ion-content>
@@ -28,15 +14,8 @@
   <ion-grid>
     <ion-row>
       <ion-col size="6" *ngFor="let m of movie">
-
-
         <img style="height:250px;width:100%" [src]="m.image_url" (click)="onSelect(m)" />
-
-
-
       </ion-col>
-
-
     </ion-row>
   </ion-grid>
 </ion-content>

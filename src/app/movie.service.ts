@@ -9,10 +9,10 @@ import { Observable} from 'rxjs';
 export class MovieService {
 
   constructor(private http: HttpClient) { }
-  private moviesUrl = 'http://localhost:3000/api/movies';
-  private bookingUrl= 'http://localhost:3000/api/booking';
-  private customerUrl = 'http://localhost:3000/api/customers';
-  private loginUrl = 'http://localhost:3000/api/login'
+  private moviesUrl = 'http://192.168.1.36:3000/api/movies';
+  private bookingUrl= 'http://192.168.1.36:3000/api/booking';
+  private customerUrl = 'http://192.168.1.36:3000/api/customers';
+  private loginUrl = 'http://192.168.1.36:3000/api/login'
   getMovies(): Observable<[]>{
     return this.http.get<[]>(this.moviesUrl);     
   }
@@ -29,6 +29,22 @@ export class MovieService {
   authenticate(data){
     return this.http.post(this.loginUrl,data);
   }
+
+  getBookings(): Observable<[]>{
+    return this.http.get<[]>(this.bookingUrl);     
+  }
+  // getCustomerByPhone(customer){
+  //   return this.http.post<[]>(this.customerUrl,customer);     
+  // }
+
+  getRemoteCustomerPassword(phone):Observable<any>{
+    return this.http.get<[]>(this.customerUrl+'/'+phone);     
+
+  }
+
+
+
+
   
  
 }

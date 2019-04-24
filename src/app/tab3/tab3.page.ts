@@ -25,5 +25,12 @@ MoviesPage(){
   this.router.navigate(['/tabs/tab1']);
 
 }
+logoutApp() {
+  this.router.navigate(['/login']);
+}
+bookingHistory(){
+  this.router.navigate(['/bookingHistory']);
+
+}
 
 }

@@ -1,10 +1,10 @@
 <ion-header>
 
     <ion-toolbar>
-      <ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+      <ion-icon name="arrow-round-back"  style="font-size:40px;float: left;left: 0;margin:0;color:rgb(209, 102, 15)"
         (click)="goback()"></ion-icon>
   
-      <ion-title>
+      <ion-title style="color:rgb(209, 102, 15)">
         Login
       </ion-title>
     </ion-toolbar>
@@ -32,13 +32,13 @@
                           <ion-input type="password" name="password" [(ngModel)]="data.password"></ion-input>
                         </ion-item><br><br>
       
-                <a click="forgotPassword()"> Forgot Password?</a><br><br>
+                <span (click)="forgotPassword()" style="color:blue"> Forgot Password?</span><br><br>
                 <ion-button size="medium" expand="block" (click)="login(data)">Login</ion-button><br>
                 <ion-button size="small" expand="block" (click)="movies()">Continue Without Login</ion-button><br>
 
     
                 <div text-center>
-                  Dont hav an account? <a click="signup()"> Sign up </a><br><br>
+                  Dont hav an account? <span (click)="signup()" style="color:blue"> Sign up </span><br><br>
                   <a href="#">Privacy policy</a>
                 </div>
   

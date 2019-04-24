@@ -26,10 +26,14 @@ export class Tab1Page {
 
   }
 
-  logoutApp(){ 
-      this.router.navigate(['/login']);
+  logoutApp() {
+    this.router.navigate(['/login']);
   }
   loginPage() {
     this.router.navigate(['/login']);
   }
+
+  
+
+
 }
